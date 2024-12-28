@@ -32,7 +32,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://your-repository-url/flask-tetris.git
+   git clone https://github.com/vladpap/flask-tetris.git
    cd flask-tetris
    ```
 
