@@ -1,0 +1,81 @@
+/* static/style.css */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-panel {
+    width: 200px;
+}
+
+.player-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#player-name {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.score {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.game-area {
+    text-align: center;
+}
+
+#tetris {
+    background-color: #000;
+    border: 2px solid #333;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.right-panel {
+    width: 200px;
+}
+
+#leaderboard {
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#leaderboard th, #leaderboard td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#leaderboard th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}

@@ -1,0 +1,50 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="game-container">
+        <div class="left-panel">
+            <div class="player-info">
+                <input type="text" id="player-name" placeholder="Введите имя">
+                <div class="score">Счет: <span id="score">0</span></div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <canvas id="tetris" width="300" height="600"></canvas>
+            <div class="controls">
+                <button onclick="moveLeft()">←</button>
+                <button onclick="rotate()">↻</button>
+                <button onclick="moveRight()">→</button>
+                <button onclick="dropDown()">↓</button>
+            </div>
+        </div>
+        
+        <div class="right-panel">
+            <h2>Лучшие игроки</h2>
+            <table id="leaderboard">
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Очки</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for player in top_players %}
+                    <tr>
+                        <td>{{ player[0] }}</td>
+                        <td>{{ player[1] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='tetris.js') }}"></script>
+</body>
+</html>
